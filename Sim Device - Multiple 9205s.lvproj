@@ -2653,13 +2653,9 @@ AddOutputFilter chunkFilter
 					<Property Name="NI.LV.FPGA.InterfaceBitfile" Type="Str">C:\Users\wwu\Desktop\InsightCM 9068 with multiple 9205s\FPGA Bitfiles\Main_FPGA 5.lvbitx</Property>
 				</Item>
 				<Item Name="Dependencies" Type="Dependencies">
-					<Item Name="9205_Read_Mod1.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod1.vi"/>
-					<Item Name="9205_Read_Mod2.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod2.vi"/>
-					<Item Name="9205_Read_Mod3.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod3.vi"/>
-					<Item Name="9205_Read_Mod4.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod4.vi"/>
-					<Item Name="9205_Read_Mod5.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod5.vi"/>
-					<Item Name="9205_Read_Mod6.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod6.vi"/>
-					<Item Name="9205 Read 5.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205 Read 5.vi"/>
+					<Item Name="vi.lib" Type="Folder">
+						<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
+					</Item>
 				</Item>
 				<Item Name="Build Specifications" Type="Build">
 					<Item Name="Main_FPGA 5" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -3906,12 +3902,8 @@ AddOutputFilter chunkFilter
 				</Item>
 			</Item>
 		</Item>
-		<Item Name="FPGA_acquisition - 9205.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/FPGA_acquisition - 9205.vi"/>
-		<Item Name="FpgaAcquisition923x.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/AcquireBaseLoop/FpgaAcquisition923x.lvlib"/>
-		<Item Name="InitializeFPGAacquisition.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/InitializeFPGAacquisition.vi"/>
 		<Item Name="Main_RT.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/Main_RT.vi"/>
 		<Item Name="Readme.txt" Type="Document" URL="../Readme.txt"/>
-		<Item Name="wfm_createChan.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/wfm_createChan.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -3955,8 +3947,7 @@ AddOutputFilter chunkFilter
 				<Item Name="AuthSrpVerificationResponse.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/Authentication/controls/AuthSrpVerificationResponse.ctl"/>
 				<Item Name="AuthSrpVerificationResponse_Parse.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/Authentication/main/AuthSrpVerificationResponse_Parse.vi"/>
 				<Item Name="AuthSrpVerificationResponseBody.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/Authentication/controls/AuthSrpVerificationResponseBody.ctl"/>
-				<Item Name="BenchmarkMap.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/Benchmarking/BenchmarkMap.vi"/>
-				<Item Name="BenchmarkName.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/Benchmarking/BenchmarkName.vi"/>
+				<Item Name="BenchmarkMap.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/Benchmarking/BenchmarkMap.vi"/>
 				<Item Name="BenchmarkToFile.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/Benchmarking/BenchmarkToFile.vi"/>
 				<Item Name="BlinkProcess.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/BlinkProcess/BlinkProcess.lvlib"/>
 				<Item Name="brniauth.dll" Type="Document" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/RT Images/InsightCM/13.0/brniauth.dll"/>
@@ -4057,6 +4048,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Find First Error.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find First Error.vi"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
 				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
+				<Item Name="FpgaAcquisition923x.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/AcquireBaseLoop/FpgaAcquisition923x.lvlib"/>
 				<Item Name="FPGABitfileManager.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/FPGABitfileManager/FPGABitfileManager.lvlib"/>
 				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
 				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
@@ -4297,11 +4289,15 @@ AddOutputFilter chunkFilter
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				<Item Name="WritePulsePositions.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/DataAccessors/main/WritePulsePositions.vi"/>
 			</Item>
+			<Item Name="Configure923xAcquisition.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/Configure923xAcquisition.vi"/>
+			<Item Name="FilterAndReorderChannels.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/FilterAndReorderChannels.vi"/>
+			<Item Name="FPGA_acquisition - 9205.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/FPGA_acquisition - 9205.vi"/>
 			<Item Name="FPGABitfileManager - 9205.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/FPGABitfileManager - 9205.vi"/>
 			<Item Name="ftpserve.out" Type="Document" URL="ftpserve.out">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="GlobalEnableDisable.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/InsightCM/Devices/WebServices/DeviceResources/GlobalEnableDisable.vi"/>
+			<Item Name="GlobalEnableDisable.vi" Type="VI" URL="/C/Program Files (x86)/National Instruments/LabVIEW 2015/InsightCM/Devices/WebServices/DeviceResources/GlobalEnableDisable.vi"/>
+			<Item Name="InitializeFPGAacquisition.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/InitializeFPGAacquisition.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -4315,8 +4311,10 @@ AddOutputFilter chunkFilter
 			<Item Name="nNIBlueBus_nCrioFixed_nRefnum.dll" Type="Document" URL="nNIBlueBus_nCrioFixed_nRefnum.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="SystemInfoToKeyValuePairs.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/InsightCM/Devices/WebServices/DeviceResources/subVIs/SystemInfoToKeyValuePairs.vi"/>
-			<Item Name="WebServiceErrorHandler.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/InsightCM/Devices/WebServices/DeviceResources/subVIs/WebServiceErrorHandler.vi"/>
+			<Item Name="rwfm_CreateChan.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/rwfm_CreateChan.vi"/>
+			<Item Name="SupportedHardware.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/SupportedHardware.vi"/>
+			<Item Name="SystemInfoToKeyValuePairs.vi" Type="VI" URL="/C/Program Files (x86)/National Instruments/LabVIEW 2015/InsightCM/Devices/WebServices/DeviceResources/subVIs/SystemInfoToKeyValuePairs.vi"/>
+			<Item Name="WebServiceErrorHandler.vi" Type="VI" URL="/C/Program Files (x86)/National Instruments/LabVIEW 2015/InsightCM/Devices/WebServices/DeviceResources/subVIs/WebServiceErrorHandler.vi"/>
 			<Item Name="ws_runtime.dll" Type="Document" URL="ws_runtime.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
