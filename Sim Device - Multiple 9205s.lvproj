@@ -2656,6 +2656,13 @@ AddOutputFilter chunkFilter
 					<Item Name="vi.lib" Type="Folder">
 						<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 					</Item>
+					<Item Name="9205 Read 5.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205 Read 5.vi"/>
+					<Item Name="9205_Read_Mod1.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod1.vi"/>
+					<Item Name="9205_Read_Mod2.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod2.vi"/>
+					<Item Name="9205_Read_Mod3.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod3.vi"/>
+					<Item Name="9205_Read_Mod4.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod4.vi"/>
+					<Item Name="9205_Read_Mod5.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod5.vi"/>
+					<Item Name="9205_Read_Mod6.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/9205_Read_Mod6.vi"/>
 				</Item>
 				<Item Name="Build Specifications" Type="Build">
 					<Item Name="Main_FPGA 5" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
