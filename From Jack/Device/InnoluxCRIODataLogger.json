@@ -1,0 +1,565 @@
+{
+  "DeviceType": "Innolux cRIO Data Logger",
+  "Capabilities": [
+    {
+      "CapabilityName": "SysCfgDeployer",
+      "Properties": {
+        "ApplicationGuid": "{F4DE796F-D708-47C6-9A47-E097E595CC62}",
+        "BootstrapGuid": "{21AC4CC9-3EEB-4AFE-9F51-C71D575186DC}",
+        "FirmwareDeployment": "true"
+      }
+    },
+    {
+      "CapabilityName": "SoftwareTemplate",
+      "Properties": null
+    },
+    {
+      "CapabilityName": "DeviceHealth",
+      "Properties": null
+    },
+    {
+      "CapabilityName": "NiAuth",
+      "Properties": null
+    },
+    {
+      "CapabilityName": "TestPanel",
+      "Properties": null
+    },
+    {
+      "CapabilityName": "AlarmEngine",
+      "Properties": null
+    },
+    {
+      "CapabilityName": "CustomClientDependencies",
+      "Properties": {
+        "CMSLib": "Base.custom.lib.CMSLib"
+      }
+    },
+    {
+      "CapabilityName": "DataGroups",
+      "Properties": {
+        "SharedChannels": "true"
+      }
+    },
+    {
+      "CapabilityName": "OperatingStates",
+      "Properties": {
+        "CanCreate": "true"
+      }
+    },
+    {
+      "CapabilityName": "FileCollectionTrigger",
+      "Properties": {
+        "CustomView": "Base.custom.trigger.BopCollectionTriggerConfig",
+        "Tag": "true",
+        "Cron": "true",
+        "Timespan": "true",
+        "TagDoubleOperators": "[\"Greater\",\"Less\",\"Equal\",\"NotEqual\",\"GreaterEqual\",\"LessEqual\",\"Delta\",\"GreaterIncreasing\",\"LessDecreasing\"]",
+        "TagIntOperators": "[\"Greater\",\"Less\",\"Equal\",\"NotEqual\",\"GreaterEqual\",\"LessEqual\",\"Delta\",\"GreaterIncreasing\",\"LessDecreasing\"]",
+        "TagStringOperators": "[\"Equal\",\"NotEqual\"]"
+      }
+    },
+    {
+      "CapabilityName": "TagCollectionTrigger",
+      "Properties": {
+        "CustomView": "Base.custom.trigger.BopCollectionTriggerConfig",
+        "Tag": "true",
+        "Cron": "true",
+        "Timespan": "true",
+        "TagDoubleOperators": "[\"Greater\",\"Less\",\"Equal\",\"NotEqual\",\"GreaterEqual\",\"LessEqual\",\"Delta\",\"GreaterIncreasing\",\"LessDecreasing\"]",
+        "TagIntOperators": "[\"Greater\",\"Less\",\"Equal\",\"NotEqual\",\"GreaterEqual\",\"LessEqual\",\"Delta\",\"GreaterIncreasing\",\"LessDecreasing\"]",
+        "TagStringOperators": "[\"Equal\",\"NotEqual\"]"
+      }
+    },
+    {
+      "CapabilityName": "EnterTrigger",
+      "Properties": {
+        "Expression": "true",
+        "Tag": "true",
+        "Dwell": "true",
+        "TagDoubleOperators": "[\"Greater\",\"Less\",\"Equal\",\"NotEqual\",\"GreaterEqual\",\"LessEqual\",\"GreaterIncreasing\",\"LessDecreasing\"]",
+        "TagIntOperators": "[\"Greater\",\"Less\",\"Equal\",\"NotEqual\",\"GreaterEqual\",\"LessEqual\",\"GreaterIncreasing\",\"LessDecreasing\"]",
+        "TagStringOperators": "[\"Equal\",\"NotEqual\"]"
+      }
+    },
+    {
+      "CapabilityName": "ExitTrigger",
+      "Properties": {
+        "Expression": "true",
+        "Tag": "true",
+        "Timespan": "true",
+        "Dwell": "true",
+        "TagDoubleOperators": "[\"Greater\",\"Less\",\"Equal\",\"NotEqual\",\"GreaterEqual\",\"LessEqual\",\"GreaterIncreasing\",\"LessDecreasing\"]",
+        "TagIntOperators": "[\"Greater\",\"Less\",\"Equal\",\"NotEqual\",\"GreaterEqual\",\"LessEqual\",\"GreaterIncreasing\",\"LessDecreasing\"]",
+        "TagStringOperators": "[\"Equal\",\"NotEqual\"]"
+      }
+    }
+  ],
+  "Properties": {
+    "Description": "CompactRIO Datalogger for Innolux"
+  },
+  "PropertyDefinitions": [     
+    {
+      "Key": "SampleRate",
+      "Type": null,
+      "Label": "Sample Rate",
+      "ValueType": "Enum",
+      "DefaultValue": "1000",
+      "Properties": {
+        "Values": "[\"1000\"]"
+      }
+    },
+    {
+      "Key": "DataBlockLength",
+      "Type": "DataGroup",
+      "Label": "Acquisition Block Length",
+      "ValueType": "Int32",
+      "DefaultValue": "2",
+      "Properties": {
+        "Min": "1",
+        "FieldWidth": "210",
+        "LabelWidth": "140"
+      }
+    },
+    {
+      "Key": "DataBlockUnit",
+      "Type": "DataGroup",
+      "Label": "Acquisition Block Unit",
+      "ValueType": "Enum",
+      "DefaultValue": "Seconds",
+      "Properties": {
+        "Values": "[\"Seconds\"]",
+        "FieldWidth": "230",
+        "LabelWidth": "130",
+        "Readonly": "true"
+      }
+    },
+    {
+      "Key": "AcquisitionLength",
+      "Type": "OperatingState",
+      "Label": "File Length",
+      "ValueType": "Int32",
+      "DefaultValue": "4",
+      "Properties": {
+        "Min": "1",
+        "Max": "60",
+        "FieldWidth": "155",
+        "LabelWidth": "80"
+      }
+    },
+    {
+      "Key": "PreTriggerLength",
+      "Type": "OperatingState",
+      "Label": "Pre-Trigger Length",
+      "ValueType": "Int32",
+      "DefaultValue": "2",
+      "Properties": {
+        "Min": "0",
+        "FieldWidth": "175",
+        "LabelWidth": "110"
+      }
+    },
+    {
+      "Key": "AcquisitionUnit",
+      "Type": "OperatingState",
+      "Label": "Acquisition Unit",
+      "ValueType": "Enum",
+      "DefaultValue": "Seconds",
+      "Properties": {
+        "Values": "[\"Seconds\",\"Revolutions\"]",
+        "FieldWidth": "200",
+        "LabelWidth": "90"
+      }
+    },
+    {
+      "Key": "LegacyAcquisitionCalculations",
+      "Type": "OperatingState",
+      "Label": "Fmax & LoR",
+      "ValueType": "ActionButton",
+      "DefaultValue": null,
+      "Properties": {
+        "ButtonWidth": "100",
+        "Title": "Legacy Acquisition Calculations",
+        "Panel": "Base.custom.properties.LegacySampleFactors",
+        "CancelButton": "false",
+        "Height": "150",
+        "Width": "300",
+        "ExcludeFromProperties": "true"
+      }
+    }
+  ],
+  "HardwareDefinitions": [
+    {
+      "Name": "cRIO Innolux",
+      "Properties": {},
+      "SocketDefinitions": [
+        {
+          "Name": "Controller",
+          "Prefix": "Controller",
+          "Rules": [
+            {
+              "Type": "Required",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "cRIO 9068"
+          ]
+        },
+        {
+          "Name": "Slot 1",
+          "Prefix": "Mod1",
+          "Rules": [
+            {
+              "Type": "Required",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9205 Innolux"
+          ]
+        },
+        {
+          "Name": "Slot 2",
+          "Prefix": "Mod2",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9205 Innolux"
+          ]
+        },
+        {
+          "Name": "Slot 3",
+          "Prefix": "Mod3",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9205 Innolux"
+          ]
+        },
+        {
+          "Name": "Slot 4",
+          "Prefix": "Mod4",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9205 Innolux"
+          ]
+        },
+        {
+          "Name": "Slot 5",
+          "Prefix": "Mod5",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9205 Innolux"
+          ]
+        },
+        {
+          "Name": "Slot 6",
+          "Prefix": "Mod6",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9205 Innolux"
+          ]
+        },
+        {
+          "Name": "Slot 7",
+          "Prefix": "Mod7",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9205 Innolux"
+          ]
+        },
+        {
+          "Name": "Slot 8",
+          "Prefix": "Mod8",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9205 Innolux"
+          ]
+        }
+      ]
+    }
+  ],
+  "ChannelGroupDefinitions": [    
+    {
+      "NumberOfChannels": 0,
+      "ChannelTypes": [
+        "Voltage Dynamic(9205)"
+      ],
+      "DefaultChannelType": "Voltage Dynamic(9205)",
+      "Format": "Ch{0:00}",
+      "StartingChannelOffset": 0
+    }
+  ],
+  "CalculatedMetrics": [
+    "Crest Factor",
+    "Derived Peak",
+    "Peak-Peak",
+    "RMS",
+    "Speed",
+    "True Peak",
+    "Gap"
+  ],
+  "NonDeviceChannels": null,
+  "ValidationRules": [
+    {
+      "Name": "Acquisition Length > Pre-Trigger Length",
+      "Type": "OperatingState",
+      "Description": "Acquisition Length must be longer than Pre-Trigger Length.",
+      "Expression": "parseInt(operatingState.Properties.AcquisitionLength) > parseInt(operatingState.Properties.PreTriggerLength)",
+      "Action": "Error",
+      "AffectedProperties": [
+        "PreTriggerLength"
+      ]
+    },
+    {
+      "Name": "Adequate acquisition length",
+      "Type": "OperatingState",
+      "Description": "With current acquisition settings, the device will not send up a full acquisition block. Increase file length or decrease acquisition block length to resolve this issue.",
+      "Expression": "CMSLib.checkAcquisitionLength(deviceModelDoc, dataGroup, operatingState)",
+      "Action": "Warning",
+      "AffectedProperties": [
+        "AcquisitionLength"
+      ]
+    },
+    {
+      "Name": "Adequate pre-trigger length",
+      "Type": "OperatingState",
+      "Description": "With current acquisition settings, the device will not send up a full acquisition block. Integrated channels require at least one second of pre-trigger data.",
+      "Expression": "CMSLib.checkPreTriggerLength(deviceModelDoc, dataGroup, operatingState)",
+      "Action": "Warning",
+      "AffectedProperties": [
+        "PreTriggerLength"
+      ]
+    }
+  ],
+  "UxRules": [
+    {
+      "Name": "Show Acquisition Duration Settings",
+      "Type": "OperatingState",
+      "Expression": "!CMSLib.dataGroupHasWaveformChannels(deviceModelDoc.deviceModel, dataGroup.Name)",
+      "Action": "Hide",
+      "AffectedProperties": [
+        "AcquisitionLength",
+        "PreTriggerLength",
+        "AcquisitionUnit",
+        "LegacyAcquisitionCalculations"
+      ]
+    },
+    {
+      "Name": "Show Sample Rate",
+      "Type": "Device",
+      "Expression": "!CMSLib.deviceHasWaveformChannels(deviceModelDoc.deviceModel)",
+      "Action": "Hide",
+      "AffectedProperties": [
+        "SampleRate"
+      ]
+    }
+  ],
+  "LayoutGroups": [
+    {
+      "Type": "Device",
+      "Name": "Device Properties",
+      "PropertyKeys": [
+        "SampleRate"
+      ],
+      "Properties": null
+    },
+    {
+      "Type": "DataGroup",
+      "Name": "Properties",
+      "PropertyKeys": [
+        "DataBlockLength",
+        "DataBlockUnit"
+      ],
+      "Properties": {
+        "Orientation": "Horizontal"
+      }
+    },
+    {
+      "Type": "OperatingState",
+      "Name": "File Collection Settings",
+      "PropertyKeys": [
+        "AcquisitionLength",
+        "PreTriggerLength",
+        "AcquisitionUnit",
+        "LegacyAcquisitionCalculations"
+      ],
+      "Properties": {
+        "Orientation": "Horizontal"
+      }
+    },
+    {
+      "Type": "Socket",
+      "Name": "Controller",
+      "PropertyKeys": [
+        "Controller"
+      ],
+      "Properties": null
+    },
+    {
+      "Type": "Socket",
+      "Name": "Slots",
+      "PropertyKeys": [
+        "Slot 1",
+        "Slot 2",
+        "Slot 3",
+        "Slot 4",
+        "Slot 5",
+        "Slot 6",
+        "Slot 7",
+        "Slot 8"
+      ],
+      "Properties": null
+    }
+  ],
+  "ConfigurationTabs": [
+    {
+      "Title": "Acquisition",
+      "Type": "acquisition",
+      "Properties": null
+    },
+    {
+      "Title": "Channels",
+      "Type": "channels",
+      "Properties": null
+    },
+    {
+      "Title": "Equipment Layout",
+      "Type": "equipmentLayout",
+      "Properties": null
+    },
+    {
+      "Title": "Device Properties",
+      "Type": "deviceProperties",
+      "Properties": null
+    },
+    {
+      "Title": "Hardware",
+      "Type": "deviceHardwareDetailsPanel",
+      "Properties": null
+    },
+    {
+      "Title": "Alarm Rules",
+      "Type": "deviceAlarmGrid",
+      "Properties": null
+    }
+  ],
+  "Configuration": [
+    {
+      "Section": "ServerComm",
+      "KeyValues": {
+        "ReconnectIntervalSeconds": "30",
+        "PacketSizeKbytes": "16",
+        "InterPacketDelay": "0",
+        "MaxAttempts": "-1"
+      }
+    },
+    {
+      "Section": "FileManager",
+      "KeyValues": {
+        "MaxTdmsFilesInMemory": "1",
+        "ManageDriveIntervalMinutes": "15",
+        "MinDriveFreeSpace": "30"
+      }
+    },
+    {
+      "Section": "TdmsCreator",
+      "KeyValues": {
+        "FileMemoryTransferMode": "true",
+        "TdmsMemoryBlockSize": "8388608",
+        "TdmsMemoryStreamBlockSize": "1048576"
+      }
+    },
+    {
+      "Section": "Accumulator",
+      "KeyValues": {
+        "MaxBlockSeconds": "20",
+        "MinBlockSeconds": "1",
+        "DefaultDataBlockLength": "4"
+      }
+    },
+    {
+      "Section": "Acquisition",
+      "KeyValues": {
+        "SettlingTimeSeconds": "30"
+      }
+    },
+    {
+      "Section": "TagPublisher",
+      "KeyValues": {
+        "OnDemandInterval": "30"
+      }
+    },
+    {
+      "Section": "SystemHealth",
+      "KeyValues": {
+        "UpdateInterval": "30"
+      }
+    },
+    {
+      "Section": "Authorization",
+      "KeyValues": {
+        "DisableDeviceWebService": "false",
+        "DisableDeviceRTProtocol": "false",
+        "DisableDeviceUSBConfiguration": "false"
+      }
+    },
+    {
+      "Section": "Controller",
+      "KeyValues": {
+        "SafeModeLookbackMinutes": "60",
+        "SafeModeAllowedReboots": "10"
+      }
+    },
+    {
+      "Section": "Watchdog",
+      "KeyValues": {
+        "SoftwareTimeout": "30",
+        "HardwareTimeout": "10",
+        "ServerCommTimeout": "100",
+        "ModbusTimeout": "60"
+      }
+    },
+    {
+      "Section": "Calculations",
+      "KeyValues": {
+        "CalculatedMetrics": "Crest Factor,Derived Peak,Peak-Peak,RMS,Speed,True Peak,Gap",
+        "NonDeviceChannels": null
+      }
+    }
+  ]
+}

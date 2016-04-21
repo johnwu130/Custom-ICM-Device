@@ -1,0 +1,36 @@
+{
+  "Name": "NI 9232",
+  "ChannelGroupDefinitions": [
+    {
+      "NumberOfChannels": 3,
+      "ChannelTypes": [
+        "Accelerometer (923x)",
+        "Velocity (923x)",
+        "Displacement (923x)",
+        "Voltage (923x)",
+        "Tachometer (923x)"
+      ],
+      "DefaultChannelType": "Accelerometer (923x)",
+      "Format": "Ch{0}",
+      "StartingChannelOffset": 0
+    }
+  ],
+  "Properties": null,
+  "SupportedSampleRates": [
+    "1024",
+    "1280",
+    "1600",
+    "2048",
+    "2560",
+    "3200",
+    "4096",
+    "5120",
+    "6400",
+    "10240",
+    "12800",
+    "20480",
+    "25600",
+    "51200",
+    "102400"
+  ]
+}

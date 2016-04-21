@@ -1,0 +1,130 @@
+{
+  "ChannelType": "Voltage Dynamic(9205)",
+  "Keywords": [
+    "Voltage Waveform"
+  ],
+  "PropertyDefinitions": [
+    {
+      "Key": "SampleMode",
+      "Type": null,
+      "Label": "Sample Mode",
+      "ValueType": "String",
+      "DefaultValue": "Waveform",
+      "Properties": {
+        "Readonly": "true"
+      }
+    },
+    {
+      "Key": "Slope",
+      "Type": null,
+      "Label": null,
+      "ValueType": "Double",
+      "DefaultValue": "1",
+      "Properties": null
+    },
+    {
+      "Key": "Offset",
+      "Type": null,
+      "Label": null,
+      "ValueType": "Double",
+      "DefaultValue": "0",
+      "Properties": null
+    },
+    {
+      "Key": "EnableRangeCheck",
+      "Type": null,
+      "Label": "Range Check",
+      "ValueType": "Bool",
+      "DefaultValue": "false",
+      "Properties": null
+    },
+    {
+      "Key": "MinimumEU",
+      "Type": null,
+      "Label": "Range Check: Minimum",
+      "ValueType": "Double",
+      "DefaultValue": "-100",
+      "Properties": null
+    },
+    {
+      "Key": "MaximumEU",
+      "Type": null,
+      "Label": "Range Check: Maximum",
+      "ValueType": "Double",
+      "DefaultValue": "100",
+      "Properties": null
+    },
+    {
+      "Key": "TerminalConfiguration",
+      "Type": null,
+      "Label": "Terminal Configuration",
+      "ValueType": "Enum",
+      "DefaultValue": "Differential",
+      "Properties": {
+        "Values": "[\"Referenced Single Ended\",\"Non-Referenced Single Ended\",\"Differential\"]"
+      }
+    },
+    {
+      "Key": "InputRange",
+      "Type": null,
+      "Label": "Input Range",
+      "ValueType": "Double",
+      "DefaultValue": "10",
+      "Properties": null
+    },
+    {
+      "Key": "Unit",
+      "Type": null,
+      "Label": null,
+      "ValueType": "Unit",
+      "DefaultValue": "volt",
+      "Properties": {
+        "UnitType": "Voltage"
+      }
+    }
+  ],
+  "Properties": {
+    "ChanStatus": "true"
+  },
+  "ValidationRules": null,
+  "UxRules": null,
+  "LayoutGroups": [
+    {
+      "Type": null,
+      "Name": "Voltage Properties",
+      "PropertyKeys": [
+        "TerminalConfiguration",
+        "InputRange",
+        "Unit"
+      ],
+      "Properties": {
+        "HelpTopic": "properties_voltage_92xx"
+      }
+    },
+    {
+      "Type": null,
+      "Name": "Properties",
+      "PropertyKeys": [
+        "Slope",
+        "Offset",
+        "EnableRangeCheck",
+        "MinimumEU",
+        "MaximumEU",
+        "SampleMode"
+      ],
+      "Properties": null
+    }
+  ],
+  "ConfigurationTabs": [
+    {
+      "Title": "Properties",
+      "Type": "properties",
+      "Properties": null
+    },
+    {
+      "Title": "Features",
+      "Type": "features",
+      "Properties": null
+    }
+  ]
+}

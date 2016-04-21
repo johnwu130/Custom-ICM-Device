@@ -1,0 +1,36 @@
+{
+  "Name": "NI 9205_32_channel",
+  "ChannelGroupDefinitions": [
+    {
+      "NumberOfChannels": 32,
+      "ChannelTypes": [
+        "Accelerometer (923x)",
+        "Velocity (923x)",
+        "Displacement (923x)",
+        "Voltage (923x)",
+        "Tachometer (923x)"
+      ],
+      "DefaultChannelType": "Accelerometer (923x)",
+      "Format": "Ch{0}",
+      "StartingChannelOffset": 0
+    }
+  ],
+  "Properties": null,
+  "SupportedSampleRates": [
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900",
+    "1000",
+    "1100",
+    "1200",
+    "1300",
+    "1400",
+    "1500"
+  ]
+}

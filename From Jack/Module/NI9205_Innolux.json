@@ -1,0 +1,20 @@
+{
+  "Name": "NI 9205 Innolux",
+  "ChannelGroupDefinitions": [
+    {
+      "NumberOfChannels": 16,
+      "ChannelTypes": [
+        "Voltage Dynamic(9205)"
+      ],
+      "DefaultChannelType": "Voltage Dynamic(9205)",
+      "Format": "Ch{0:00}",
+      "StartingChannelOffset": 0
+    }
+  ],
+  "Properties": {
+    "AlternateName": "NI 9205"
+  },
+  "SupportedSampleRates": [
+    "1000"
+  ]
+}
