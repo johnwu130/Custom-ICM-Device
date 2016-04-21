@@ -3745,7 +3745,6 @@ AddOutputFilter chunkFilter
 				</Item>
 			</Item>
 		</Item>
-		<Item Name="cRIOWfmLib.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/cRIOWfmAcq/cRIOWfmLib.lvlib"/>
 		<Item Name="device" Type="Web Service">
 			<Property Name="Bld_buildSpecName" Type="Str"></Property>
 			<Property Name="Bld_version.build" Type="Int">4</Property>
@@ -3976,6 +3975,7 @@ AddOutputFilter chunkFilter
 				<Item Name="CreateFolder.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/Misc/CreateFolder.vi"/>
 				<Item Name="CreatePipeSeparatedList.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/Base/subVIs/CreatePipeSeparatedList.vi"/>
 				<Item Name="cRIODetectHW.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/cRIODetectHW/cRIODetectHW.lvlib"/>
+				<Item Name="cRIOWfmLib.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/cRIOWfmAcq/cRIOWfmLib.lvlib"/>
 				<Item Name="CronScheduler.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/CronScheduler/CronScheduler.lvlib"/>
 				<Item Name="DataAccumulator.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/DataAccumulatorProcess/DataAccumulator.lvlib"/>
 				<Item Name="DataExplorerHelper.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/DataExplorerHelper/DataExplorerHelper.lvlib"/>
