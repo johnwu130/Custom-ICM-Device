@@ -84,12 +84,7 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="quick test.vi" Type="VI" URL="/C/Users/wwu/Desktop/quick test.vi"/>
-		<Item Name="Dependencies" Type="Dependencies">
-			<Item Name="vi.lib" Type="Folder">
-				<Item Name="AnalysisHelper.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/Analysis/Shared/AnalysisHelper.lvlib"/>
-			</Item>
-		</Item>
+		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
 	<Item Name="RT CompactRIO Target" Type="RT CompactRIO">
@@ -3952,8 +3947,7 @@ AddOutputFilter chunkFilter
 				<Item Name="AuthSrpVerificationResponse.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/Authentication/controls/AuthSrpVerificationResponse.ctl"/>
 				<Item Name="AuthSrpVerificationResponse_Parse.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/Authentication/main/AuthSrpVerificationResponse_Parse.vi"/>
 				<Item Name="AuthSrpVerificationResponseBody.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/Authentication/controls/AuthSrpVerificationResponseBody.ctl"/>
-				<Item Name="BenchmarkMap.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/Benchmarking/BenchmarkMap.vi"/>
-				<Item Name="BenchmarkName.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/Benchmarking/BenchmarkName.vi"/>
+				<Item Name="BenchmarkMap.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/Benchmarking/BenchmarkMap.vi"/>
 				<Item Name="BenchmarkToFile.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/Benchmarking/BenchmarkToFile.vi"/>
 				<Item Name="BlinkProcess.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/BlinkProcess/BlinkProcess.lvlib"/>
 				<Item Name="brniauth.dll" Type="Document" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/RT Images/InsightCM/13.0/brniauth.dll"/>
