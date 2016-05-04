@@ -331,7 +331,11 @@
     "RMS",
     "Speed",
     "True Peak",
-    "Gap"
+    "Gap",
+    "Spectral Band: Orders",
+    "Spectral Band: Phase",
+    "Spectral Band",
+    "Residual"
   ],
   "NonDeviceChannels": null,
   "ValidationRules": [
@@ -557,7 +561,7 @@
     {
       "Section": "Calculations",
       "KeyValues": {
-        "CalculatedMetrics": "Crest Factor,Derived Peak,Peak-Peak,RMS,Speed,True Peak,Gap",
+        "CalculatedMetrics": "Crest Factor,Derived Peak,Peak-Peak,RMS,Speed,True Peak,Gap,Spectral Band,Spectral Band: Orders,Spectral Band: Phase,Residual",
         "NonDeviceChannels": null
       }
     }

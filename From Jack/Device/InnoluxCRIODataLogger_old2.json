@@ -106,7 +106,7 @@
       "ValueType": "Enum",
       "DefaultValue": "1000",
       "Properties": {
-		"Values": "[\"100\",\"200\",\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\",\"1000\",\"1100\",\"1200\",\"1300\",\"1400\",\"1500\"]"
+        "Values": "[\"1000\"]"
       }
     },
     {
@@ -284,43 +284,31 @@
             "NI 9205 Innolux"
           ]
         },
-		{
+        {
           "Name": "Slot 7",
           "Prefix": "Mod7",
-          "Rules": null,
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
           "SupportedModules": [
-            "NI 9205",
-            "NI 9207",
-            "NI 9208",
-            "NI 9211",
-            "NI 9213",
-            "NI 9214",
-            "NI 9217",
-            "NI 9219",
-            "NI 9229",
-            "NI 9239",
-            "NI 9425",
-            "NI 9426"
+            "NI 9205 Innolux"
           ]
         },
         {
           "Name": "Slot 8",
           "Prefix": "Mod8",
-          "Rules": null,
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
           "SupportedModules": [
-            "NI 9205",
-            "NI 9207",
-            "NI 9208",
-            "NI 9211",
-            "NI 9213",
-            "NI 9214",
-            "NI 9217",
-            "NI 9219",
-            "NI 9229",
-            "NI 9239",
-            "NI 9425",
-            "NI 9426"
-          ]		
+            "NI 9205 Innolux"
+          ]
         }
       ]
     }
@@ -343,11 +331,7 @@
     "RMS",
     "Speed",
     "True Peak",
-    "Gap",
-    "Spectral Band: Orders",
-    "Spectral Band: Phase",
-    "Spectral Band",
-    "Residual"
+    "Gap"
   ],
   "NonDeviceChannels": null,
   "ValidationRules": [
@@ -573,7 +557,7 @@
     {
       "Section": "Calculations",
       "KeyValues": {
-        "CalculatedMetrics": "Crest Factor,Derived Peak,Peak-Peak,RMS,Speed,True Peak,Gap,Spectral Band,Spectral Band: Orders,Spectral Band: Phase,Residual",
+        "CalculatedMetrics": "Crest Factor,Derived Peak,Peak-Peak,RMS,Speed,True Peak,Gap",
         "NonDeviceChannels": null
       }
     }
