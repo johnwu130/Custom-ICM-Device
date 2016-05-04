@@ -561,7 +561,7 @@
     {
       "Section": "Calculations",
       "KeyValues": {
-        "CalculatedMetrics": "Crest Factor,Derived Peak,Peak-Peak,RMS,Speed,True Peak,Gap,Spectral Band,Spectral Band: Orders,Spectral Band: Phase, Residual",
+        "CalculatedMetrics": "Crest Factor,Derived Peak,Peak-Peak,RMS,Speed,True Peak,Gap,Spectral Band,Spectral Band: Orders,Spectral Band: Phase,Residual",
         "NonDeviceChannels": null
       }
     }
