@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nidocument>
+<nicomment>
+WebPager error codes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nifamily familyname="WebPager" displayname="WebPager">
+</nifamily>
+</nicomment>
+<nierror code="500000">
+GUI upload to the server failed.
+</nierror>
+<nierror code="500001">
+There is no info about this target VI. Probably it hasn't been uploaded yet.
+</nierror>
+<nierror code="500002">
+You are trying to use invalid or empty reference. Before calling any WebPager API VIs make sure first that you uploaded the GUI and initialized the VI reference.
+</nierror>
+<nierror code="500003">
+The plan has already expired. You can activate it from 'Account' tab in the WebPager Wizard.
+</nierror>
+<nierror code="500004">
+License key is not valid.
+</nierror>
+<nierror code="500005">
+Your current WebPager plan is 'Basic'. You can use Express API only with 'Economy', 'Pro' and 'Deluxe' accounts. To enable this functionality please upgrade to one of these plans from the WebPager Wizard ('Account' tab).
+</nierror>
+<nierror code="500006">
+You can use Basic API VIs ('Upload', 'Start' and 'Stop') only with 'Pro' and 'Deluxe' accounts. To enable this functionality please upgrade to one of these plans from the WebPager Wizard ('Account' tab).
+</nierror>
+<nierror code="500007">
+Such account doesn't exist. Register the account at WebPager first.
+</nierror>
+<nierror code="500008">
+License key for local network is not found.
+</nierror>
+<nierror code="500009">
+License key for the Internet is not found.
+</nierror>
+<nierror code="500010">
+This VI cannot access the referenced item. Use only public API VIs presented on the WebPager palette. You shouldn't use any of the private scope WebPager VIs - they are for internal use only, not supported and their interface may change at any moment.
+</nierror>
+<nierror code="500011">
+Server side error happend during activating new license. Check your registration data and account balance. If error persists, contact support.
+</nierror>
+<nierror code="500012">
+WebPager instance with the same license is already running on another computer.
+</nierror>
+<nierror code="500013">
+WebPager can not access local network from this computer.
+</nierror>
+<nierror code="500014">
+WebPager can not access the Internet from this computer.
+</nierror>
+<nierror code="500015">
+Upload to LAN failed. Port is already in use.
+</nierror>
+<nierror code="500016">
+Upload to LAN failed.
+</nierror>
+<nierror code="500017">
+wp.exe process is not running.
+</nierror>
+<nierror code="500018">
+wp.exe can't access local ports on this computer.
+</nierror>
+<nierror code="500099">
+The process was detected that is probably trying to compromise WebPager licensing scheme. Try closing such processes and special debugging tools and then restart WebPager. If error persist please write to our support team. Thank you for being honest and using WebPager according to WebPager license agreement.
+</nierror>
+<nierror code="500101">
+You are trying to start FP-WP synchronization for the VI that is already synchronized.
+</nierror>
+<nierror code="500102">
+Synchronization VI hasn't been started yet. Call 'Start FP-WP Synchronization' VI  or 'WP Express' first.
+</nierror>
+</nidocument>

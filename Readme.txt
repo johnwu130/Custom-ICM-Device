@@ -39,3 +39,9 @@ Now I'm stuck.
 Jack noticed the array sizes on the FPGA weren't consistent.  Easy change.
 
 4/20/2016
+
+
+Fixed everything, but watchdogs are not working as an RTEXE.  Disabled them for now.
+Using Main_RT_Watchdog_Off.vi as the deployment package.
+
+05/09/2016
