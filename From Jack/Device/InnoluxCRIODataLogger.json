@@ -4,7 +4,7 @@
     {
       "CapabilityName": "SysCfgDeployer",
       "Properties": {
-        "ApplicationGuid": "{7DBFF9B6-FE51-27B7-6ED3-56FA7BAE3C88}",
+        "ApplicationGuid": "{1E08118A-4B7D-2349-61D3-57323B9A9668}",
         "BootstrapGuid": "{21AC4CC9-3EEB-4AFE-9F51-C71D575186DC}",
         "FirmwareDeployment": "true"
       }

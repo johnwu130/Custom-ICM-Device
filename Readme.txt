@@ -45,3 +45,7 @@ Fixed everything, but watchdogs are not working as an RTEXE.  Disabled them for 
 Using Main_RT_Watchdog_Off.vi as the deployment package.
 
 05/09/2016
+
+Turned the watchdog back on, changed timer from 5s to 30s.  Everything works now.
+
+05/10/2016

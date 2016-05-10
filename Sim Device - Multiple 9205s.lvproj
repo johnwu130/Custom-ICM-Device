@@ -114,7 +114,7 @@
 		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
 		<Property Name="target.RTTarget.EnableFileSharing" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.IPAccess" Type="Str">+*</Property>
-		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">true</Property>
+		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">false</Property>
 		<Property Name="target.RTTarget.VIPath" Type="Path">/home/lvuser/natinst/bin</Property>
 		<Property Name="target.server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="target.server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -3747,7 +3747,7 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="device" Type="Web Service">
 			<Property Name="Bld_buildSpecName" Type="Str"></Property>
-			<Property Name="Bld_version.build" Type="Int">10</Property>
+			<Property Name="Bld_version.build" Type="Int">11</Property>
 			<Property Name="ws.autoIncrementVersion" Type="Bool">true</Property>
 			<Property Name="ws.disconnectInline" Type="Bool">true</Property>
 			<Property Name="ws.disconnectTypeDefs" Type="Bool">false</Property>
@@ -3904,7 +3904,6 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="Main_RT.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/Main_RT.vi"/>
 		<Item Name="Main_RT_Watchdog_Off.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/Main_RT_Watchdog_Off.vi"/>
-		<Item Name="Main_RT_Watchdog_On.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/Main_RT_Watchdog_On.vi"/>
 		<Item Name="Readme.txt" Type="Document" URL="../Readme.txt"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -4355,7 +4354,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{C311802B-074F-40EC-B005-077F3FF52F57}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">3</Property>
+				<Property Name="Bld_version.build" Type="Int">4</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
@@ -4415,88 +4414,6 @@ AddOutputFilter chunkFilter
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright ?2016 NI</Property>
 				<Property Name="TgtF_productName" Type="Str">Main_RT_Watchdog_Off</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{1BBB43C8-1B35-4313-A65C-4675F55ED9E8}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">startup.rtexe</Property>
-			</Item>
-			<Item Name="Main_RT_Watchdog_On" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
-				<Property Name="App_copyErrors" Type="Bool">true</Property>
-				<Property Name="App_INI_aliasGUID" Type="Str">{F31CF868-3E5A-447D-98FC-89A11930A879}</Property>
-				<Property Name="App_INI_GUID" Type="Str">{912F4C05-C361-4F4D-8E46-46441683A894}</Property>
-				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
-				<Property Name="App_webService.count" Type="Int">1</Property>
-				<Property Name="App_webService[0].itemID" Type="Ref">/RT CompactRIO Target/device</Property>
-				<Property Name="App_winsec.description" Type="Str">http://www.NI.com</Property>
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
-				<Property Name="Bld_buildCacheID" Type="Str">{81732834-3A76-4891-B64E-0249CE505D3F}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Main_RT_Watchdog_On</Property>
-				<Property Name="Bld_compilerOptLevel" Type="Int">0</Property>
-				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
-				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
-				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_excludeTypedefs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/NI_AB_TARGETNAME/Main_RT_Watchdog_On</Property>
-				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
-				<Property Name="Bld_previewCacheID" Type="Str">{3A44640B-AE46-4D8A-AC79-BD28A5EAC448}</Property>
-				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">1</Property>
-				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
-				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
-				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
-				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
-				<Property Name="Destination[0].type" Type="Str">App</Property>
-				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">/home/lvuser/natinst/bin/data</Property>
-				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
-				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{EE833CB4-D1F6-43C0-B141-1C482478A97F}</Property>
-				<Property Name="Source[0].type" Type="Str">Container</Property>
-				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/RT CompactRIO Target/Main_RT_Watchdog_On.vi</Property>
-				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
-				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[10].itemID" Type="Ref">/RT CompactRIO Target/device/Web Resources/TestConnection.vi</Property>
-				<Property Name="Source[10].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[10].type" Type="Str">VI</Property>
-				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/RT CompactRIO Target/device/Web Resources/ClearSafeMode.vi</Property>
-				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[2].type" Type="Str">VI</Property>
-				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/RT CompactRIO Target/device/Web Resources/GetConnectionInfo.vi</Property>
-				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[3].type" Type="Str">VI</Property>
-				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[4].itemID" Type="Ref">/RT CompactRIO Target/device/Web Resources/GetFirmwareInfo.vi</Property>
-				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[4].type" Type="Str">VI</Property>
-				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/RT CompactRIO Target/device/Web Resources/GetHardwareInfo.vi</Property>
-				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[5].type" Type="Str">VI</Property>
-				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[6].itemID" Type="Ref">/RT CompactRIO Target/device/Web Resources/GetHostname.vi</Property>
-				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[6].type" Type="Str">VI</Property>
-				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[7].itemID" Type="Ref">/RT CompactRIO Target/device/Web Resources/GetLogFiles.vi</Property>
-				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[7].type" Type="Str">VI</Property>
-				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[8].itemID" Type="Ref">/RT CompactRIO Target/device/Web Resources/Reboot.vi</Property>
-				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[8].type" Type="Str">VI</Property>
-				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[9].itemID" Type="Ref">/RT CompactRIO Target/device/Web Resources/SetConnectionInfo.vi</Property>
-				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[9].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">11</Property>
-				<Property Name="TgtF_companyName" Type="Str">NI</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Main_RT_Watchdog_On</Property>
-				<Property Name="TgtF_internalName" Type="Str">Main_RT_Watchdog_On</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright ?2016 NI</Property>
-				<Property Name="TgtF_productName" Type="Str">Main_RT_Watchdog_On</Property>
-				<Property Name="TgtF_targetfileGUID" Type="Str">{3D79D111-9441-4828-A54F-CEA3506376C5}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">startup.rtexe</Property>
 			</Item>
 			<Item Name="My Real-Time Application" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
