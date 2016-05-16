@@ -114,7 +114,7 @@
 		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
 		<Property Name="target.RTTarget.EnableFileSharing" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.IPAccess" Type="Str">+*</Property>
-		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">false</Property>
+		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.VIPath" Type="Path">/home/lvuser/natinst/bin</Property>
 		<Property Name="target.server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="target.server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -3948,8 +3948,7 @@ AddOutputFilter chunkFilter
 				<Item Name="AuthSrpVerificationResponse.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/Authentication/controls/AuthSrpVerificationResponse.ctl"/>
 				<Item Name="AuthSrpVerificationResponse_Parse.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/Authentication/main/AuthSrpVerificationResponse_Parse.vi"/>
 				<Item Name="AuthSrpVerificationResponseBody.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/Authentication/controls/AuthSrpVerificationResponseBody.ctl"/>
-				<Item Name="BenchmarkMap.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/Benchmarking/BenchmarkMap.vi"/>
-				<Item Name="BenchmarkName.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/Benchmarking/BenchmarkName.vi"/>
+				<Item Name="BenchmarkMap.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/Benchmarking/BenchmarkMap.vi"/>
 				<Item Name="BenchmarkToFile.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/Devices/Shared/Benchmarking/BenchmarkToFile.vi"/>
 				<Item Name="BlinkProcess.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/BlinkProcess/BlinkProcess.lvlib"/>
 				<Item Name="brniauth.dll" Type="Document" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/RT Images/InsightCM/13.0/brniauth.dll"/>
@@ -4305,6 +4304,7 @@ AddOutputFilter chunkFilter
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="GetBandBounds.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/GetBandBounds.vi"/>
+			<Item Name="GetBandCalculation.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/GetBandCalculation.vi"/>
 			<Item Name="GetDeviceConfig.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/GetDeviceConfig.vi"/>
 			<Item Name="GlobalEnableDisable.vi" Type="VI" URL="/C/Program Files (x86)/National Instruments/LabVIEW 2015/InsightCM/Devices/WebServices/DeviceResources/GlobalEnableDisable.vi"/>
 			<Item Name="InitializeFPGAacquisition.vi" Type="VI" URL="../ProjectTemplates/Source/InsightCM/VIs/InitializeFPGAacquisition.vi"/>
